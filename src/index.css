@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-apart {
+    @apply flex items-center justify-between;
+  }
+}
+
+.padded {
+  @apply px-4 md:px-10 2xl:px-[112px]
+}
