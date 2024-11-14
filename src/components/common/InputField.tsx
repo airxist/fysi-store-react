@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputField = ({
+const InputField : React.FC<InputFieldProps> = ({
   containerStyle,
   type = "text",
   placeholder,

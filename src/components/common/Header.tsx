@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { icons } from "../../constants";
 import Btn from "./Btn";
 import HorizontalNav from "./HorizontalNav";
@@ -55,6 +55,7 @@ const Header = () => {
               placeholder="Search Categories"
               inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
               inputContainerStyle="flex items-center px-3 py-2"
+              value=""
             />
 
             <Btn
@@ -75,6 +76,7 @@ const Header = () => {
             placeholder="Search Categories"
             inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
             inputContainerStyle="flex items-center px-3 py-2"
+            value=""
           />
 
           <Btn

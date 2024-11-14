@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { horizontalNav } from "../../constants";
 
 const HorizontalNav = () => {
