@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 
 interface TitleDescriptionProps {
   containerStyle?: string;
@@ -8,7 +8,7 @@ interface TitleDescriptionProps {
   descriptionStyle?: string;
 }
 
-const TitleDescription : FC<TitleDescriptionProps> = ({
+const TitleDescription : React.FC<TitleDescriptionProps> = ({
   containerStyle,
   title,
   description,
