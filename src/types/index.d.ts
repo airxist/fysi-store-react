@@ -21,3 +21,26 @@ declare interface InputFieldProps {
   value: string;
   [key: string]: any;
 }
+
+declare interface ServiceCardProp {
+  icon: string;
+  title: string;
+}
+
+declare interface RegularListProps {
+  data: any[];
+  dataContainerStyle?: string;
+  renderComponent: (data: any[]) => React.JSX;
+  listEmpty?: () => React.JSX;
+  listHeader?: () => React.JSX;
+}
+
+declare interface SearchInputFieldProps {
+  containerStyle?: string;
+  placeHolder: string;
+  icon?: React.ComponentProps;
+  inputContainerStyle: string;
+  inputStyle?: string;
+  value: string;
+  [key: string]: any;
+}

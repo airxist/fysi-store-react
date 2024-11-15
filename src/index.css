@@ -9,6 +9,14 @@
   .flex-apart {
     @apply flex items-center justify-between;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  @apply bg-grey-500
 }
 
 .padded {

@@ -1,10 +1,10 @@
-// import React from "react";
-
 import { icons } from "../../constants";
 import Btn from "./Btn";
 import HorizontalNav from "./HorizontalNav";
-import InputField from "./InputField";
 import CallToActionNav from "./CallToActionNav";
+import SearchInputField from "./SearchInputField";
+import ToggleContent from "./_custom_ui/ToggleContent";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -41,52 +41,51 @@ const Header = () => {
 
         <div className="flex-1 flex-apart">
           <div className="flex items-center">
-            <Btn
-              IconLeft={<img src={icons.menu} alt="menu" />}
-              btnVariant="transparent"
+            <ToggleContent
+              icon={icons.menu}
+              dataContainerStyle="pt-2 pb-6 px-2 w-[194px]"
+              data={[
+                { title: "My Account", icon: icons.user },
+                { title: "Order History", icon: icons.history },
+              ]}
               containerStyle="hidden lg:block"
-            />
+              listHeader={() => (
+                <Link
+                  to="/"
+                  className="bg-forest_green-500 text-white rounded-[8px] w-full h-9 block flex-center mb-[14px] font-bold"
+                >
+                  Sign In
+                </Link>
+              )}
+            ></ToggleContent>
 
             <HorizontalNav />
           </div>
 
-          <div className="border bg-[#F0F2F5] rounded-[6px] border-forest_green-300 h-9 hidden lg:flex-apart max-w-[347px] flex-1">
-            <InputField
-              icon={icons.search}
-              placeholder="Search Categories"
-              inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
-              inputContainerStyle="flex items-center px-3 py-2"
-              value=""
-              onChange={() => {}}
-            />
-
-            <Btn
-              text="Search"
-              containerStyle="h-full rounded-[4px] px-4 py-2 text-sm"
-            />
-          </div>
+          <SearchInputField
+            containerStyle="border bg-[#F0F2F5] rounded-[6px] border-forest_green-300 h-9 hidden lg:flex-apart max-w-[347px] flex-1"
+            placeHolder="Search Categories"
+            inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
+            inputContainerStyle="flex items-center px-3 py-2"
+            value=""
+            handleSearch={() => {}}
+            btnStyle="h-full rounded-[4px] px-4 py-2 text-sm"
+          />
 
           <CallToActionNav />
         </div>
       </div>
 
       <div className="mt-3 mb-8 padded md:hidden">
-        <div className="border bg-white rounded-[6px] border-[#D0D5DD] flex-center h-9">
-          <InputField
-            containerStyle="flex-1"
-            icon={icons.search}
-            placeholder="Search Categories"
-            inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
-            inputContainerStyle="flex items-center px-3 py-2"
-            value=""
-            onChange={() => {}}
-          />
-
-          <Btn
-            text="Search"
-            containerStyle="h-full rounded-[4px] px-4 py-2 text-sm"
-          />
-        </div>
+        <SearchInputField
+          containerStyle="border bg-white rounded-[6px] border-[#D0D5DD] flex-center h-9"
+          placeHolder="Search Categories"
+          inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
+          inputContainerStyle="flex items-center px-3 py-2"
+          value=""
+          handleSearch={() => {}}
+          btnStyle="h-full rounded-[4px] px-4 py-2 text-sm"
+        />
       </div>
     </header>
   );
