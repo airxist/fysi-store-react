@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const getBtnVariant = (variant: string) => {
   switch (variant) {
     case "secondary":
-      return "bg-gray-50 text-black";
+      return "bg-white border border-forest_green-500 text-forest_green-600";
     case "outline":
       return "bg-transparent border";
     case "transparent":

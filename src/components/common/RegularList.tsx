@@ -6,6 +6,7 @@ const RegularList : FC<RegularListProps> = ({
   renderComponent,
   listEmpty: ListEmpty = () => <div>data is null</div>,
   listHeader: ListHeader,
+  listFooter: ListFooter
 }) => {
   return (
     <>
@@ -15,6 +16,7 @@ const RegularList : FC<RegularListProps> = ({
       ) : (
         <div className={dataContainerStyle}>{renderComponent(data)}</div>
       )}
+      {ListFooter && <ListFooter />}
     </>
   );
 };

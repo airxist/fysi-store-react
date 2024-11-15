@@ -6,6 +6,7 @@ declare interface BtnProps {
   btnVariant?: string;
   textVariant?: string;
   href?: string;
+  [key: string]: any
 }
 
 declare interface InputFieldProps {
@@ -33,6 +34,7 @@ declare interface RegularListProps {
   renderComponent: (data: any[]) => React.JSX;
   listEmpty?: () => React.JSX;
   listHeader?: () => React.JSX;
+  listFooter?: () => React.JSX;
 }
 
 declare interface SearchInputFieldProps {
@@ -43,4 +45,21 @@ declare interface SearchInputFieldProps {
   inputStyle?: string;
   value: string;
   [key: string]: any;
+}
+
+declare interface ProductProps {
+  id?: number;
+  rating: number;
+  reviews: number;
+  productName: string;
+  price: number;
+  serialId: string;
+  description: string;
+  features: string[];
+  category: string;
+  productImage?: string;
+}
+
+declare interface ProductStoreProps {
+  [key: string]: ProductProps[];
 }

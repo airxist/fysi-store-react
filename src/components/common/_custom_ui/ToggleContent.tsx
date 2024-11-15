@@ -16,7 +16,7 @@ const ToggleContent = ({
   data: any[];
   label?: string;
   icon: string;
-  dataContainerStyle: string;
+  dataContainerStyle?: string;
   containerStyle?: string;
   listHeader?: () => React.ReactNode;
 }) => {

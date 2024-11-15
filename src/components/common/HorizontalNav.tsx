@@ -11,7 +11,7 @@ const HorizontalNav = () => {
             <li className="flex-center gap-x-1" key={title}>
               <ToggleContent
                 label={title}
-                icon={icon}
+                icon={icon!}
                 dataContainerStyle={dataContainerStyle}
                 data={data}
               />

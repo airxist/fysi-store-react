@@ -5,12 +5,12 @@ import ProductCard from "../common/cards/ProductCard";
 import Btn from "../common/Btn";
 const ShowCaseProducts = () => {
   const { pathname } = useLocation();
+  const cleanPathname = pathname.slice(1).replace(/%20/gi, " ").toLowerCase();
+  console.log(cleanPathname, "cleanpath");
   return (
     <div className="flex-1">
       <div className="mb-6">
-        <p className="text-xl font-medium">
-          {pathname.slice(1).replace("%20", " ")}
-        </p>
+        <p className="text-xl font-medium">{cleanPathname}</p>
 
         <div className="flex items-center mt-3 md:hidden gap-x-2">
           <Btn
@@ -31,12 +31,13 @@ const ShowCaseProducts = () => {
       </div>
 
       <RegularList
-        data={PRODUCTS["accessories"]}
+        data={PRODUCTS[cleanPathname] ?? []}
         dataContainerStyle="gap-x-2 gap-y-4 flex flex-wrap justify-between"
         renderComponent={(products) => (
           <>
-            {products.map((product) => (
+            {products.map((product, index) => (
               <ProductCard
+                key={index}
                 {...product}
                 containerStyle="w-[calc(50%-4px)] lg:w-[calc(25%-6px)]"
               />

@@ -11,7 +11,7 @@ const NewIns = () => {
         renderComponent={(products) => (
           <>
             {products.map((product) => (
-              <ProductCard {...product} />
+              <ProductCard {...product} key={product.id} />
             ))}
           </>
         )}

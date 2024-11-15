@@ -1,10 +1,10 @@
 import { icons } from "../../constants";
-import Btn from "./Btn";
 import HorizontalNav from "./HorizontalNav";
 import CallToActionNav from "./CallToActionNav";
 import SearchInputField from "./SearchInputField";
 import ToggleContent from "./_custom_ui/ToggleContent";
 import { Link } from "react-router-dom";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -27,11 +27,7 @@ const Header = () => {
 
       <div className="flex items-center padded h-20 md:h-[92px] gap-x-10">
         <div className="flex-center gap-x-2">
-          <Btn
-            IconLeft={<img src={icons.menu} alt="menu" />}
-            btnVariant="transparent"
-            containerStyle="md:hidden"
-          />
+          <MobileNav />
 
           <div className="font-bold flex-center">
             <img src={icons.bag} alt="bag" />

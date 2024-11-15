@@ -31,13 +31,13 @@ const Footer = () => {
                       <>
                         {data.map((item) =>
                           item.title ? (
-                            <p className="text-xs text-forest_green-100 md:text-base md:font-medium">
+                            <p className="text-xs text-forest_green-100 md:text-base md:font-medium" key={item.title}>
                               {item.title}
                             </p>
                           ) : (
                             <IconWrapper
                               containerStyle="p-3 rounded-full size-10 bg-forest_green-900"
-                              icon={item.icon}
+                              icon={item.icon} key={item.icon}
                             />
                           )
                         )}

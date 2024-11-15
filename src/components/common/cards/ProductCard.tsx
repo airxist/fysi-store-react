@@ -1,6 +1,7 @@
 import React from "react";
 import { icons } from "../../../constants";
 import IconWrapper from "../IconWrapper";
+import { Link } from "react-router-dom";
 
 export interface ProductCardProps {
   productName?: string;
@@ -8,6 +9,8 @@ export interface ProductCardProps {
   price?: number;
   discount?: number;
   containerStyle: string;
+  id?: number;
+  category: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -16,11 +19,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price = 28000,
   discount = 15,
   containerStyle = "w-[224px] lg:w-[calc(100%/5)] min-h-[298px] select-none",
+  id,
+  category,
 }) => {
   const discountedPrice = () => 3000;
 
   return (
-    <div className={`p-2 bg-white inline-block ${containerStyle}`}>
+    <Link
+      to={`${productName}/?productId=${id}&productCategory=${category}`}
+      className={`p-2 bg-white inline-block ${containerStyle}`}
+    >
       <figure className="relative h-[208px]">
         <IconWrapper
           icon={icons.heart}
@@ -43,7 +51,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="text-[18px] font-medium">₦{price}</p>
         {discount && <p className="line-through">₦{discountedPrice()}</p>}
       </div>
-    </div>
+    </Link>
   );
 };
 

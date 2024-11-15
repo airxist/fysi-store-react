@@ -1,24 +1,19 @@
-import { useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import GeneralLayout from "../_layout/GeneralLayout";
 import DisplayRoutes from "../common/DisplayRoutes";
-import MenuItem from "./MenuItem";
-import ShowCaseProducts from "./ShowCaseProducts";
+import CatalogueIndex from "./sub-pages/CatalogueIndex";
+import ProductInfo from "./sub-pages/ProductInfo";
 
 const Catalogue = () => {
-  const location = useLocation();
-  const routes = location.pathname.split("/").filter(Boolean);
-  routes.forEach((item) => {
-    console.log(item.replace("%20", " "));
-  });
   return (
     <GeneralLayout>
       <div className="padded">
         <DisplayRoutes />
 
-        <div className="flex items-start mb-20 gap-x-4">
-          <MenuItem />
-          <ShowCaseProducts />
-        </div>
+        <Routes>
+          <Route index element={<CatalogueIndex />} />
+          <Route path="/:id" element={<ProductInfo />} />
+        </Routes>
       </div>
     </GeneralLayout>
   );
