@@ -7,7 +7,7 @@ const HorizontalNav = () => {
       <ul className="flex items-center gap-x-[30px]">
         {horizontalNav.map(({ title, icon }) => {
           return (
-            <li className="flex-center gap-x-1">
+            <li className="flex-center gap-x-1" key={title}>
               {title}{" "}
               {icon && (
                 <span>

@@ -1,4 +1,5 @@
 // import React from "react";
+
 import { icons } from "../../constants";
 import Btn from "./Btn";
 import HorizontalNav from "./HorizontalNav";
@@ -56,6 +57,7 @@ const Header = () => {
               inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
               inputContainerStyle="flex items-center px-3 py-2"
               value=""
+              onChange={() => {}}
             />
 
             <Btn
@@ -77,6 +79,7 @@ const Header = () => {
             inputStyle="bg-transparent ml-1 border-none outline-none text-sm"
             inputContainerStyle="flex items-center px-3 py-2"
             value=""
+            onChange={() => {}}
           />
 
           <Btn
