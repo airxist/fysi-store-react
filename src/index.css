@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "ma_bold";
+  src: url("./assets/fonts/MontserratAlternates-Bold.ttf");
+}
+@font-face {
+  font-family: "ma_med";
+  src: url("./assets/fonts/MontserratAlternates-Medium.ttf");
+}
+@font-face {
+  font-family: "ma_regular";
+  src: url("./assets/fonts/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+  font-family: "ma_smbold";
+  src: url("./assets/fonts/MontserratAlternates-SemiBold.ttf");
+}
+@font-face {
+  font-family: "DMSansBold";
+  src: url("./assets/fonts/DMSansBold.ttf");
+}
+@font-face {
+  font-family: "DMSansMedium";
+  src: url("./assets/fonts/DMSansMedium.ttf");
+}
+@font-face {
+  font-family: "DMSansRegular";
+  src: url("./assets/fonts/DMSansRegular.ttf");
+}
+@font-face {
+  font-family: "DMSansSemiBold";
+  src: url("./assets/fonts/DMSansSemiBold.ttf");
+}
+
 @layer utilities {
   .flex-center {
     @apply flex items-center justify-center;
@@ -15,10 +48,11 @@
   }
 }
 
+
 body {
-  @apply bg-grey-500
+  @apply bg-grey-500;
 }
 
 .padded {
-  @apply px-4 md:px-10 2xl:px-[112px]
+  @apply px-4 md:px-10 2xl:px-[112px];
 }

@@ -29,9 +29,11 @@ import funnel from "../assets/icons/funnel.png";
 import cartWhite from "../assets/icons/cart-white.png";
 import avatar from "../assets/icons/avatar.png";
 import plus from "../assets/icons/plus.png";
+import noResult from "../assets/icons/no-result.png";
 
 import home_hero_bg from "../assets/images/home_bg.jpg";
 import palm from "../assets/images/palm.png";
+import notFound from "../assets/images/not-found.png";
 
 import category1 from "../assets/images/accessories.png";
 import category2 from "../assets/images/clothing.png";
@@ -61,6 +63,12 @@ import accessories10 from "../assets/images/accessories10.png";
 import accessories11 from "../assets/images/accessories11.png";
 import accessories12 from "../assets/images/accessories12.png";
 
+import about1 from "../assets/images/about1.png";
+import about2 from "../assets/images/about2.png";
+import about3 from "../assets/images/about3.png";
+import about4 from "../assets/images/about4.png";
+import about5 from "../assets/images/about5.png";
+
 export const icons = {
   accessories,
   arrow,
@@ -71,6 +79,7 @@ export const icons = {
   cartWhite,
   cert,
   plus,
+  noResult,
   cloth,
   facebook,
   funnel,
@@ -122,6 +131,12 @@ export const images = {
   accessories10,
   accessories11,
   accessories12,
+  about1,
+  about2,
+  about3,
+  about4,
+  about5,
+  notFound,
 };
 
 export const horizontalNav: {
@@ -153,7 +168,8 @@ export const horizontalNav: {
     title: "About Us",
     dataContainerStyle: "py-[18px] px-[30px] w-[194px]",
     data: [
-      { title: "Contact" },
+      { title: "Contact", href: '/support/contact' },
+      { title: "About", href: "/about" },
       { title: "X" },
       { title: "Instagram" },
       { title: "Facebook" },
@@ -163,10 +179,10 @@ export const horizontalNav: {
     title: "Support",
     dataContainerStyle: "py-5 pl-4 w-[153px]",
     data: [
-      { title: "FAQ" },
+      { title: "FAQ", href: "/support/faq" },
       { title: "Help Center" },
-      { title: "Report a Product" },
-      { title: "Returns" },
+      { title: "Report a Product", href: "/support/report" },
+      { title: "Returns", href: "/returns" },
     ],
   },
 ];
@@ -297,22 +313,6 @@ export const PRODUCT_ON_DEMAND = [
   { productImage: images.demand4, id: 4 },
   { productImage: images.demand5, id: 5 },
 ];
-
-// export const HOT_DEALS = [
-//   { imageUrl: hot1 },
-//   { imageUrl: hot2 },
-//   { imageUrl: hot3 },
-//   { imageUrl: hot4 },
-//   { imageUrl: hot5 },
-// ];
-
-// export const NEW_IN = [
-//   { imageUrl: new1 },
-//   { imageUrl: new2 },
-//   { imageUrl: new3 },
-//   { imageUrl: new4 },
-//   { imageUrl: new5 },
-// ];
 
 export const MENU_DROPDOWN = [
   { title: "Contact" },
@@ -654,5 +654,98 @@ export const customerReviews = [
       "Absolutely love it! Great design and very user-friendly. Would definitely buy again.",
     rating: 5,
     time: "2024-11-11T09:50:00Z",
+  },
+];
+
+export const aboutData = [
+  {
+    title: "About Us",
+    description:
+      "Welcome to Fysi, your go-to marketplace for eco-friendly products that help you live a more sustainable lifestyle. At Fysi, we believe in the power of nature and the importance of making conscious choices that benefit both you and the planet.",
+    imageUrl: images.about1,
+  },
+  {
+    title: "Our Mission",
+    description:
+      "We are committed to connecting eco-conscious customers with vendors who share our passion for sustainability. Our mission is to make it easy for you to find and purchase products that are not only good for you but also good for the environment. Every item on our platform is carefully vetted and certified to meet our high standards of eco-friendliness.",
+    imageUrl: images.about2,
+    order: true,
+  },
+  {
+    title: "Our Vendors",
+    description:
+      "We partner with a diverse range of vendors who are dedicated to creating high-quality, sustainable products. From organic cotton clothing to handcrafted bamboo items, our vendors are at the forefront of the green movement. They are passionate about what they do, and we are proud to support them in their mission to make a positive impact on the world.",
+    imageUrl: images.about3,
+  },
+  {
+    title: "Eco-Certification",
+    description:
+      "At Fysi, we take sustainability seriously. That's why we have developed a rigorous eco-certification process to ensure that every product on our platform meets our strict criteria for environmental responsibility. When you shop with us, you can trust that you are making a choice that aligns with your values.",
+    imageUrl: images.about4,
+    order: true,
+  },
+  {
+    title: "Why Fysi?",
+    reasons: [
+      {
+        title: "Sustainaiblity",
+        description:
+          "Every product is eco-certified, ensuring you make responsible choices.",
+      },
+      {
+        title: "Quality",
+        description:
+          "Our vendors are selected for their commitment to high standards and sustainable practices.",
+      },
+      {
+        title: "Convenience",
+        description:
+          "Shop from a wide range of eco-friendly products, all in one place.",
+      },
+    ],
+    imageUrl: images.about5,
+  },
+];
+
+export const returnsData = [
+  {
+    title: "Returns & Refunds",
+    description:
+      "At Fysi, we want you to be completely satisfied with your purchase. If for any reason you are not, our Returns and Refunds policy is here to help.",
+  },
+  {
+    title: "Easy Returns",
+    description:
+      "If you wish to return an item, you can do so within 14 days of receiving your order. Please ensure that the product is unused, in its original packaging, and in the same condition you received it.",
+  },
+  {
+    title: "How to initiate a Return",
+    description:
+      "If you wish to return an item, you can do so within 14 days of receiving your order. Please ensure that the product is unused, in its original packaging, and in the same condition you received it.",
+    procedure: [
+      "Contact Us: Start by reaching out to our customer support team through our contact form or email.",
+      "Receive Return Instructions: We’ll guide you through the return process, including how to ship the item back to us.",
+      "Ship the Item: Pack the item securely and send it to the address provided by our team.",
+    ],
+  },
+  {
+    title: "Refund Process",
+    description:
+      "If you wish to return an item, you can do so within 14 days of receiving your order. Please ensure that the product is unused, in its original packaging, and in the same condition you received it.",
+  },
+  {
+    title: "Exceptions",
+    description:
+      "Certain items, such as perishable goods or personalized products, may not be eligible for return. Please check the product description for specific return eligibility.",
+  },
+  {
+    title: "Exchanges",
+    description:
+      "If you received a defective or damaged item, we're happy to offer a replacement. Contact us within 7 days of receiving your order, and we'll arrange an exchange.",
+  },
+  {
+    title: "Need Assistance ?",
+    description:
+      "If you have any questions or need help with your return, our customer support team is here for you. Reach out anytime, and we'll be glad to assist you!",
   },
 ];

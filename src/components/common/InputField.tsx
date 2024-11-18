@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputField : React.FC<InputFieldProps> = ({
+const InputField: React.FC<InputFieldProps> = ({
   containerStyle,
   type = "text",
   placeholder,
@@ -15,10 +15,15 @@ const InputField : React.FC<InputFieldProps> = ({
 }) => {
   return (
     <div className={containerStyle}>
-      {label && <label htmlFor={name}>{label}</label>}
+      {label && (
+        <label htmlFor={name} className={labelStyle}>
+          {label}
+        </label>
+      )}
+
       <div className={`relative ${inputContainerStyle}`}>
         {icon && <img src={icon} alt={name} />}
-        
+
         <input
           type={type}
           name={name}

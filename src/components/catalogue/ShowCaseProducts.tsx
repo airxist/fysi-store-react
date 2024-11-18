@@ -5,8 +5,9 @@ import ProductCard from "../common/cards/ProductCard";
 import Btn from "../common/Btn";
 const ShowCaseProducts = () => {
   const { pathname } = useLocation();
+  
   const cleanPathname = pathname.slice(1).replace(/%20/gi, " ").toLowerCase();
-  console.log(cleanPathname, "cleanpath");
+  
   return (
     <div className="flex-1">
       <div className="mb-6">

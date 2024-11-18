@@ -5,6 +5,14 @@ export default {
     extend: {
       fontFamily: {
         inter: ["var(--font-inter)"],
+        ma_bold: ["ma_bold"],
+        ma_med: ["ma_med"],
+        ma_regular: ["ma_regular"],
+        ma_smbold: ["ma_smbold"],
+        DMSansBold: ["DMSansBold"],
+        DMSansMedium: ["DMSansMedium"],
+        DMSansRegular: ["DMSansRegular"],
+        DMSansSemiBold: ["DMSansSemiBold"],
       },
       colors: {
         background: "var(--background)",

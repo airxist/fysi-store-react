@@ -1,12 +1,19 @@
 import { FC } from "react";
+import IconWrapper from "./IconWrapper";
+import { icons } from "../../constants";
 
-const RegularList : FC<RegularListProps> = ({
+const RegularList: FC<RegularListProps> = ({
   data,
   dataContainerStyle,
   renderComponent,
-  listEmpty: ListEmpty = () => <div>data is null</div>,
+  listEmpty: ListEmpty = () => (
+    <div className="flex-col h-20 text-center flex-center">
+      <IconWrapper icon={icons.noResult} containerStyle="size-24" />
+      <p className="text-xs font-ma_med">data not available</p>
+    </div>
+  ),
   listHeader: ListHeader,
-  listFooter: ListFooter
+  listFooter: ListFooter,
 }) => {
   return (
     <>

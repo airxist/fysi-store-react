@@ -6,7 +6,7 @@ declare interface BtnProps {
   btnVariant?: string;
   textVariant?: string;
   href?: string;
-  [key: string]: any
+  [key: string]: any;
 }
 
 declare interface InputFieldProps {
@@ -62,4 +62,13 @@ declare interface ProductProps {
 
 declare interface ProductStoreProps {
   [key: string]: ProductProps[];
+}
+
+declare interface AboutBlockProps {
+  containerStyle: string;
+  title: string;
+  description?: string;
+  reasons?: { title: string; description: string }[];
+  imageUrl: string;
+  order?: boolean;
 }

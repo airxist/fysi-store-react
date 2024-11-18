@@ -5,6 +5,7 @@ import SearchInputField from "./SearchInputField";
 import ToggleContent from "./_custom_ui/ToggleContent";
 import { Link } from "react-router-dom";
 import MobileNav from "./MobileNav";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
@@ -29,10 +30,7 @@ const Header = () => {
         <div className="flex-center gap-x-2">
           <MobileNav />
 
-          <div className="font-bold flex-center">
-            <img src={icons.bag} alt="bag" />
-            <p className="text-[28px]">Fysi</p>
-          </div>
+         <Logo />
         </div>
 
         <div className="flex-1 flex-apart">
@@ -53,7 +51,7 @@ const Header = () => {
                   Sign In
                 </Link>
               )}
-            ></ToggleContent>
+            />
 
             <HorizontalNav />
           </div>
