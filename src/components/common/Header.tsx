@@ -10,7 +10,7 @@ import Logo from "./Logo";
 const Header = () => {
   return (
     <header>
-      <div className="hidden h-12 text-xs font-medium md:flex-apart md:block bg-forest_green-700 padded text-forest_green-50">
+      <div className="hidden h-12 text-xs font-medium md:flex-apart md:block bg-custom-orange-900 padded text-forest_green-50">
         <p className="flex-center">
           <span>
             <img src={icons.call} alt="phone" />
@@ -20,7 +20,9 @@ const Header = () => {
 
         <div className="divide-x-2 flex-center">
           <p className="pr-2">Get 50% Off on Selected Items</p>
-          <p className="pl-2">Sell on Fysi</p>
+          <Link to="/onboarding/vendor" className="pl-2">
+            Sell on Fysi
+          </Link>
         </div>
 
         <span />
@@ -30,7 +32,7 @@ const Header = () => {
         <div className="flex-center gap-x-2">
           <MobileNav />
 
-         <Logo />
+          <Logo />
         </div>
 
         <div className="flex-1 flex-apart">

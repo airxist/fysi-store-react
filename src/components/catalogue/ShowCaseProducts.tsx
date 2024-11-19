@@ -6,12 +6,12 @@ import Btn from "../common/Btn";
 const ShowCaseProducts = () => {
   const { pathname } = useLocation();
   
-  const cleanPathname = pathname.slice(1).replace(/%20/gi, " ").toLowerCase();
+  const cleanPathname = pathname.slice(1).replace(/%20/gi, " ").toLowerCase().slice(10);
   
   return (
     <div className="flex-1">
       <div className="mb-6">
-        <p className="text-xl font-medium">{cleanPathname}</p>
+        <p className="text-xl font-DMSansMedium">{cleanPathname}</p>
 
         <div className="flex items-center mt-3 md:hidden gap-x-2">
           <Btn

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Btn from "../../common/Btn";
-import InputField from "../../common/InputField";
+import InputField from "../../common/_form-inputs/InputField";
+import InputSelect from "../../common/_form-inputs/InputSelect";
+import { issueType, resolution } from "../../../constants";
 
 const Report = () => {
   const [reportData, setReportData] = useState({
@@ -45,17 +47,15 @@ const Report = () => {
           }
         />
 
-        <InputField
+        <InputSelect
           label="Issue Type"
           labelStyle="text-sm font-DMSansMedium"
           placeholder="Choose an issue type"
-          containerStyle=""
-          inputContainerStyle="h-14 border border-[#D0D5DD] rounded-[6px]"
-          inputStyle="size-full rounded-[6px] px-4 py-2"
-          value={reportData.issue}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setReportData({ ...reportData, issue: e.target.value })
-          }
+          containerStyle="relative"
+          inputContainerStyle="h-14 border border-[#D0D5DD] rounded-[6px] px-4 py-2 bg-white"
+          selectOptions={issueType}
+          contentStyle="px-5 py-7"
+          handleSelect={(option: string) => console.log(option)}
         />
 
         <InputField
@@ -97,17 +97,15 @@ const Report = () => {
           }
         />
 
-        <InputField
+        <InputSelect
           label="Preferred Resolution"
           labelStyle="text-sm font-DMSansMedium"
           placeholder="Choose a preferred resolution"
           containerStyle=""
-          inputContainerStyle="h-14 border border-[#D0D5DD] rounded-[6px]"
-          inputStyle="size-full rounded-[6px] px-4 py-2"
-          value={reportData.resolution}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setReportData({ ...reportData, resolution: e.target.value })
-          }
+          inputContainerStyle="h-14 border border-[#D0D5DD] rounded-[6px] px-4 py-2"
+          selectOptions={resolution}
+          contentStyle="px-5 py-7"
+          handleSelect={(option: string) => console.log(option)}
         />
 
         <InputField

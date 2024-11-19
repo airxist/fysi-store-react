@@ -1,15 +1,11 @@
 import { useState } from "react";
 
 export const useToggle = () => {
-  const [show, setshow] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
-  const toggleOn = () => setshow(true);
+  const toggleOn = () => setToggle(true);
+  const toggleOff = () => setToggle(false);
+  const toggleMain = () => setToggle((prev) => !prev);
 
-  const toggleOff = () => setshow(false);
-
-  return {
-    toggleOn,
-    toggleOff,
-    show
-  };
+  return { toggle, toggleOff, toggleOn, toggleMain };
 };

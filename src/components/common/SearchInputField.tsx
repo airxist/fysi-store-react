@@ -1,7 +1,7 @@
 import React from "react";
 import { icons } from "../../constants";
 import Btn from "./Btn";
-import InputField from "./InputField";
+import InputField from "./_form-inputs/InputField";
 
 const SearchInputField: React.FC<SearchInputFieldProps> = ({
   containerStyle,

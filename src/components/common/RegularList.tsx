@@ -7,7 +7,7 @@ const RegularList: FC<RegularListProps> = ({
   dataContainerStyle,
   renderComponent,
   listEmpty: ListEmpty = () => (
-    <div className="flex-col h-20 text-center flex-center">
+    <div className="flex-col text-center flex-center">
       <IconWrapper icon={icons.noResult} containerStyle="size-24" />
       <p className="text-xs font-ma_med">data not available</p>
     </div>

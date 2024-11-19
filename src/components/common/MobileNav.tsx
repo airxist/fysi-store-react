@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { horizontalNav, icons } from "../../constants";
+import { icons, mobileHorizontalNav } from "../../constants";
 import { useToggle } from "../../lib/hooks/useToggle";
 import Btn from "./Btn";
 import Logo from "./Logo";
 import IconWrapper from "./IconWrapper";
 
 const MobileNav = () => {
-  const { show, toggleOff, toggleOn } = useToggle();
+  const { toggle, toggleOff, toggleOn } = useToggle();
   return (
     <nav>
       <Btn
@@ -16,7 +16,7 @@ const MobileNav = () => {
         onClick={toggleOn}
       />
 
-      {show && (
+      {toggle && (
         <div className="fixed top-0 left-0 z-50 w-full h-screen px-4 overflow-y-scroll bg-forest_green-500 no-scrollbar py-7">
           <div className="flex-apart">
             <Logo />
@@ -27,11 +27,10 @@ const MobileNav = () => {
             />
           </div>
 
-          <div>
-            {horizontalNav.map((item) => {
-              console.log(item);
+          <div className="divide-y">
+            {mobileHorizontalNav.map((item) => {
               return (
-                <div className="mb-4 text-white" key={item.title}>
+                <div className="py-4 text-white" key={item.title}>
                   <p className="text-xl font-bold">{item.title}</p>
                   <div className="mt-2 space-y-2">
                     {item.data.map(({ title, href, icon }) => {

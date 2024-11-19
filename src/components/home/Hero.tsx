@@ -19,7 +19,6 @@ const Hero = () => {
           <Btn
             text="Shop Now"
             btnVariant="secondary"
-            textVariant="secondary"
             containerStyle="rounded-md flex-center font-bold text-xs  py-2 px-[10px] lg:py-4 lg:px-6 mx-auto mt-6"
           />
         </div>

@@ -11,7 +11,7 @@ const ProductOnDemand = () => {
         renderComponent={(products) => (
           <>
             {products.map((product) => (
-              <ProductCard {...product} />
+              <ProductCard {...product} key={product.id} />
             ))}
           </>
         )}

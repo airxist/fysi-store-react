@@ -4,7 +4,6 @@ declare interface BtnProps {
   IconRight?: React.ComponentProps;
   containerStyle: string;
   btnVariant?: string;
-  textVariant?: string;
   href?: string;
   [key: string]: any;
 }
@@ -19,7 +18,7 @@ declare interface InputFieldProps {
   inputStyle?: string;
   label?: string;
   labelStyle?: string;
-  value: string;
+  value?: string;
   [key: string]: any;
 }
 

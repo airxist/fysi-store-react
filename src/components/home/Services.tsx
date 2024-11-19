@@ -12,7 +12,7 @@ const Services = () => {
           return (
             <>
               {services.map((item) => (
-                <ServiceCard {...item} />
+                <ServiceCard {...item} key={item.title} />
               ))}
             </>
           );

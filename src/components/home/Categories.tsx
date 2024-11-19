@@ -11,7 +11,7 @@ const Categories = () => {
         renderComponent={(data) => (
           <>
             {data.map((category) => (
-              <CatProdCard {...category} />
+              <CatProdCard {...category} key={category.title} />
             ))}
           </>
         )}

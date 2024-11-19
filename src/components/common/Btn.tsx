@@ -10,7 +10,7 @@ const getBtnVariant = (variant: string) => {
     case "transparent":
       return "bg-transparent text-black";
     default:
-      return "bg-forest_green-500 text-white";
+      return "bg-custom-orange-800 text-white";
   }
 };
 

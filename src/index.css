@@ -56,3 +56,11 @@ body {
 .padded {
   @apply px-4 md:px-10 2xl:px-[112px];
 }
+
+.head-title {
+  @apply text-[28px] font-DMSansMedium
+}
+
+.head-description {
+  @apply font-DMSansRegular
+}

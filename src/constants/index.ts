@@ -1,35 +1,43 @@
-import call from "../assets/icons/call.png";
-import bag from "../assets/icons/bag.png";
-import menu from "../assets/icons/menu.png";
-import search from "../assets/icons/search.png";
+import accessories from "../assets/icons/accessories.png";
 import arrow from "../assets/icons/arrow.png";
+import avatar from "../assets/icons/avatar.png";
+import bag from "../assets/icons/bag.png";
+import call from "../assets/icons/call.png";
+import care from "../assets/icons/care.png";
+import cart from "../assets/icons/cart.png";
+import cartWhite from "../assets/icons/cart-white.png";
+import cert from "../assets/icons/cert.png";
+import cloth from "../assets/icons/cloth.png";
+import direction from "../assets/icons/direction.png";
+import doneCorrect from "../assets/icons/doneCorrect.png";
+import facebook from "../assets/icons/facebook.png";
+import funnel from "../assets/icons/funnel.png";
 import heart from "../assets/icons/heart.png";
 import heartWhite from "../assets/icons/heart-white.png";
-import cart from "../assets/icons/cart.png";
-import sms from "../assets/icons/sms.png";
-import instagram from "../assets/icons/instagram.png";
-import facebook from "../assets/icons/facebook.png";
-import twitter from "../assets/icons/twitter.png";
-import pack from "../assets/icons/pack.png";
-import van from "../assets/icons/van.png";
-import leaf from "../assets/icons/leaf.png";
-import cert from "../assets/icons/cert.png";
-import note from "../assets/icons/note.png";
-import pot from "../assets/icons/pot.png";
-import cloth from "../assets/icons/cloth.png";
-import care from "../assets/icons/care.png";
-import supplies from "../assets/icons/supplies.png";
-import house from "../assets/icons/house.png";
-import makeup from "../assets/icons/makeup.png";
-import outdoor from "../assets/icons/outdoor.png";
-import accessories from "../assets/icons/accessories.png";
 import history from "../assets/icons/history.png";
-import user from "../assets/icons/user.png";
-import funnel from "../assets/icons/funnel.png";
-import cartWhite from "../assets/icons/cart-white.png";
-import avatar from "../assets/icons/avatar.png";
-import plus from "../assets/icons/plus.png";
+import house from "../assets/icons/house.png";
+import instagram from "../assets/icons/instagram.png";
+import leaf from "../assets/icons/leaf.png";
+import logout from "../assets/icons/logout.png";
+import makeup from "../assets/icons/makeup.png";
+import menu from "../assets/icons/menu.png";
 import noResult from "../assets/icons/no-result.png";
+import note from "../assets/icons/note.png";
+import outdoor from "../assets/icons/outdoor.png";
+import pack from "../assets/icons/pack.png";
+import pencil from "../assets/icons/pencil.png";
+import plus from "../assets/icons/plus.png";
+import pot from "../assets/icons/pot.png";
+import search from "../assets/icons/search.png";
+import settings from "../assets/icons/settings.png";
+import sms from "../assets/icons/sms.png";
+import supplies from "../assets/icons/supplies.png";
+import tick from "../assets/icons/tick.png";
+import twitter from "../assets/icons/twitter.png";
+import user from "../assets/icons/user.png";
+import van from "../assets/icons/van.png";
+import x from "../assets/icons/close-circle.png";
+import bagWhite from "../assets/icons/bag-white.png";
 
 import home_hero_bg from "../assets/images/home_bg.jpg";
 import palm from "../assets/images/palm.png";
@@ -69,18 +77,32 @@ import about3 from "../assets/images/about3.png";
 import about4 from "../assets/images/about4.png";
 import about5 from "../assets/images/about5.png";
 
+import eco_contact from "../assets/images/eco-friendly.png";
+
+import conboard1 from "../assets/images/conboard1.jpg";
+import conboard2 from "../assets/images/conboard2.jpg";
+import conboard3 from "../assets/images/conboard3.jpg";
+import venboard1 from "../assets/images/venboard1.png";
+import venboard2 from "../assets/images/venboard2.png";
+import venboard3 from "../assets/images/venboard3.png";
+
 export const icons = {
+  bagWhite,
+  pencil,
+  settings,
+  logout,
   accessories,
   arrow,
+  avatar,
   bag,
   call,
   care,
   cart,
   cartWhite,
   cert,
-  plus,
-  noResult,
+  x,
   cloth,
+  direction,
   facebook,
   funnel,
   heart,
@@ -91,17 +113,20 @@ export const icons = {
   leaf,
   makeup,
   menu,
+  noResult,
   note,
   outdoor,
   pack,
+  plus,
   pot,
   search,
   sms,
   supplies,
+  tick,
   twitter,
   user,
   van,
-  avatar,
+  doneCorrect,
 };
 
 export const images = {
@@ -137,6 +162,13 @@ export const images = {
   about4,
   about5,
   notFound,
+  eco_contact,
+  conboard1,
+  conboard2,
+  conboard3,
+  venboard1,
+  venboard2,
+  venboard3,
 };
 
 export const horizontalNav: {
@@ -150,25 +182,49 @@ export const horizontalNav: {
     icon: icons.arrow,
     dataContainerStyle: "py-6 px-10 w-[476px]",
     data: [
-      { title: "Clothing", icon: icons.cloth, href: "/Clothing" },
-      { title: "Kitchen Items", icon: icons.pot, href: "/Kitchen Items" },
-      { title: "Personal Care", icon: icons.care, href: "/Personal Care" },
+      { title: "Clothing", icon: icons.cloth, href: "/catalogue/Clothing" },
+      {
+        title: "Kitchen Items",
+        icon: icons.pot,
+        href: "/catalogue/Kitchen Items",
+      },
+      {
+        title: "Personal Care",
+        icon: icons.care,
+        href: "/catalogue/Personal Care",
+      },
       {
         title: "Office Supplies",
         icon: icons.supplies,
-        href: "/Office Supplies",
+        href: "/catalogue/Office Supplies",
       },
-      { title: "House Hold Items", icon: icons.house, href: "/House hold" },
-      { title: "Beauty & Cosmetics", icon: icons.makeup, href: "/Beauty" },
-      { title: "Outdoor & Travel", icon: icons.outdoor, href: "/Outdoor" },
-      { title: "Accessories", icon: icons.accessories, href: "/Accessories" },
+      {
+        title: "House Hold Items",
+        icon: icons.house,
+        href: "/catalogue/House hold",
+      },
+      {
+        title: "Beauty & Cosmetics",
+        icon: icons.makeup,
+        href: "/catalogue/Beauty",
+      },
+      {
+        title: "Outdoor & Travel",
+        icon: icons.outdoor,
+        href: "/catalogue/Outdoor",
+      },
+      {
+        title: "Accessories",
+        icon: icons.accessories,
+        href: "/catalogue/Accessories",
+      },
     ],
   },
   {
     title: "About Us",
     dataContainerStyle: "py-[18px] px-[30px] w-[194px]",
     data: [
-      { title: "Contact", href: '/support/contact' },
+      { title: "Contact", href: "/support/contact" },
       { title: "About", href: "/about" },
       { title: "X" },
       { title: "Instagram" },
@@ -182,15 +238,106 @@ export const horizontalNav: {
       { title: "FAQ", href: "/support/faq" },
       { title: "Help Center" },
       { title: "Report a Product", href: "/support/report" },
-      { title: "Returns", href: "/returns" },
+      { title: "Returns", href: "/support" },
+    ],
+  },
+];
+
+export const mobileHorizontalNav = [
+  {
+    title: "",
+    data: [
+      { icon: icons.user, title: "My Account", href: "/customer/management" },
+      {
+        icon: icons.history,
+        title: "Order History",
+        href: "/customer/management/order-history",
+      },
+      { icon: icons.sms, title: "Inbox", href: "/customer/management/inbox" },
+      {
+        icon: icons.pencil,
+        title: "Reviews",
+        href: "/customer/management/reviews",
+      },
+      {
+        icon: icons.settings,
+        title: "Settings",
+        href: "/customer/management/settings",
+      },
+      { icon: icons.logout, title: "Log Out", href: "/customer/management" },
+    ],
+  },
+
+  {
+    title: "Catalogue",
+    icon: icons.arrow,
+    dataContainerStyle: "py-6 px-10 w-[476px]",
+    data: [
+      { title: "Clothing", icon: icons.cloth, href: "/catalogue/Clothing" },
+      {
+        title: "Kitchen Items",
+        icon: icons.pot,
+        href: "/catalogue/Kitchen Items",
+      },
+      {
+        title: "Personal Care",
+        icon: icons.care,
+        href: "/catalogue/Personal Care",
+      },
+      {
+        title: "Office Supplies",
+        icon: icons.supplies,
+        href: "/catalogue/Office Supplies",
+      },
+      {
+        title: "House Hold Items",
+        icon: icons.house,
+        href: "/catalogue/House hold",
+      },
+      {
+        title: "Beauty & Cosmetics",
+        icon: icons.makeup,
+        href: "/catalogue/Beauty",
+      },
+      {
+        title: "Outdoor & Travel",
+        icon: icons.outdoor,
+        href: "/catalogue/Outdoor",
+      },
+      {
+        title: "Accessories",
+        icon: icons.accessories,
+        href: "/catalogue/Accessories",
+      },
+    ],
+  },
+  {
+    title: "",
+    data: [
+      { icon: icons.user, title: "Sell on Fysi", href: "/onboarding/vendor" },
+      {
+        icon: icons.history,
+        title: "About Us",
+        href: "/about",
+      },
+      {
+        icon: icons.pencil,
+        title: "Support",
+        href: "/support",
+      },
+      {
+        icon: icons.settings,
+        title: "Contact",
+        href: "/customer/management/settings",
+      },
     ],
   },
 ];
 
 export const callToAction = [
-  { title: "Sign Up" },
-  { title: "WishList", icon: icons.heart },
-  { title: "Cart", icon: icons.cart },
+  { title: "Sign Up", href: "/onboarding" },
+  { title: "WishList", icon: icons.heart, href: "/wishes" },
+  { title: "Cart", icon: icons.cart, href: "/cart" },
 ];
 
 export const landing_page_hero = {
@@ -748,4 +895,59 @@ export const returnsData = [
     description:
       "If you have any questions or need help with your return, our customer support team is here for you. Reach out anytime, and we'll be glad to assist you!",
   },
+];
+
+export const onboardingPhotos = {
+  customer: [images.conboard1, images.conboard2, images.conboard3],
+  vendor: [images.venboard1, images.venboard2, images.venboard3],
+};
+
+export const customerNav = [
+  { icon: icons.user, title: "My Account", href: "/customer/management" },
+  {
+    icon: icons.history,
+    title: "Order History",
+    href: "/customer/management/order-history",
+  },
+  { icon: icons.sms, title: "Inbox", href: "/customer/management/inbox" },
+  {
+    icon: icons.pencil,
+    title: "Reviews",
+    href: "/customer/management/reviews",
+  },
+  {
+    icon: icons.settings,
+    title: "Settings",
+    href: "/customer/management/settings",
+  },
+  { icon: icons.logout, title: "Log Out", href: "/customer/management" },
+];
+
+export const messages = [
+  {
+    date: "13 July",
+    title: "How was your Experience?",
+    message:
+      'Thank you for shopping with us! We hope you were happy with your item(s). Our customers rely on reviews from insightful customers such as yourself to decide which of our products is best for them. We would love to hear your feedback on the seller and item, please click on the "Pending Reviews" section to share. Thank you for shopping on Fysi!',
+  },
+  {
+    date: "11 July",
+    title: "Package delivered!",
+    message:
+      "Package# DS-EAC-1146354782-3724 is delivered. You can rate your product to let other people know about it. Not happy? You can return it within 7 days from now! Thank you for shopping on Fysi!",
+    productImage: images.accessories1,
+    productName: "Accessories",
+  },
+];
+
+export const resolution = ["full refund", "replacement", "exchange", "repair"];
+
+export const issueType = [
+  "Damaged Product",
+  "Incorrect Item Received",
+  "Item Not as Described",
+  "Defective Product",
+  "Poor Quality",
+  "Size/Color Mismatch",
+  "Missing Parts",
 ];

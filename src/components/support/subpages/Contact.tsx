@@ -7,7 +7,7 @@ const Contact = () => {
     <section className="py-10 padded">
       <div className="flex flex-col items-start md:flex-row gap-x-20">
         <IconWrapper
-          icon={images.home_hero_bg}
+          icon={images.eco_contact}
           containerStyle="w-full md:flex-1 border h-[241px] md:h-[500px] flex-center md:order-2"
         />
 
@@ -48,16 +48,19 @@ const Contact = () => {
             containerStyle="w-[50%] md:w-[25%] h-[50%] md:h-full flex flex-col justify-end"
             iconStyle="h-[70%] object-center object-cover"
           />
+          
           <IconWrapper
             icon={images.about2}
             containerStyle="w-[50%] md:w-[25%] h-[50%] md:h-full"
             iconStyle="h-[70%] object-center object-cover"
           />
+          
           <IconWrapper
             icon={images.about3}
             containerStyle="w-[50%] md:w-[25%] h-[50%] md:h-full flex flex-col justify-end"
             iconStyle="h-[70%] object-center object-cover"
           />
+          
           <IconWrapper
             icon={images.about4}
             containerStyle="w-[50%] md:w-[25%] h-[50%] md:h-full"
