@@ -1,7 +1,7 @@
 import React, { Children, cloneElement, isValidElement, useState } from "react";
 
 export interface ChildProps {
-  nextStep: () => void;
+  nextStep?: () => void;
   prevStep?: () => void;
 }
 
