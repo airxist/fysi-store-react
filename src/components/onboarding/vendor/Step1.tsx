@@ -3,7 +3,12 @@ import Btn from "../../common/Btn";
 import InputField from "../../common/_form-inputs/InputField";
 import InputSelect from "../../common/_form-inputs/InputSelect";
 
-const VendorStep1 = ({ nextStep }: { nextStep?: () => void }) => {
+const VendorStep1 = ({
+  nextStep,
+}: {
+  nextStep?: () => void;
+  prevStep?: () => void;
+}) => {
   return (
     <form
       className="w-full md:w-[90%] mx-auto"
@@ -23,11 +28,11 @@ const VendorStep1 = ({ nextStep }: { nextStep?: () => void }) => {
           placeholder="Choose Your country"
           containerStyle=""
           inputContainerStyle="h-14 border border-[#D0D5DD] rounded-[6px] px-4 py-2"
-          selectOptions={['Nigeria']}
+          selectOptions={["Nigeria"]}
           contentStyle="px-5 py-7"
           handleSelect={(option: string) => console.log(option)}
         />
-        
+
         <InputField
           labelStyle="text-sm font-DMSansMedium"
           type="email"

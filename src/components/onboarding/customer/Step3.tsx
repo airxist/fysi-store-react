@@ -1,10 +1,16 @@
 // import { Link } from "react-router-dom";
+import React from "react";
 import StepLayout from "../../_layout/StepLayout";
 import Btn from "../../common/Btn";
 
-const Step3 = ({ nextStep }: { nextStep?: () => void }) => {
+import { ChildProps } from "../OnboardingForm";
+
+const Step3: React.FC<ChildProps> = ({ nextStep }) => {
   return (
-    <form className="w-full md:w-[90%] mx-auto" onSubmit={(e) => e.preventDefault()}>
+    <form
+      className="w-full md:w-[90%] mx-auto"
+      onSubmit={(e) => e.preventDefault()}
+    >
       <StepLayout
         title="Verify your email address"
         titleStyle="text-center md:text-start"

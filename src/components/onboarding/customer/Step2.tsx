@@ -3,7 +3,12 @@ import StepLayout from "../../_layout/StepLayout";
 import Btn from "../../common/Btn";
 import InputField from "../../common/_form-inputs/InputField";
 
-const Step2 = ({ nextStep }: { nextStep?: () => void }) => {
+const Step2 = ({
+  nextStep,
+}: {
+  nextStep?: () => void;
+  prevStep?: () => void;
+}) => {
   return (
     <form className="w-full md:w-[80%] mx-auto">
       <StepLayout

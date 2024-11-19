@@ -1,5 +1,10 @@
 import React, { Children, cloneElement, isValidElement, useState } from "react";
 
+export interface ChildProps {
+  nextStep: () => void;
+  prevStep?: () => void;
+}
+
 const OnboardingForm = ({
   children,
   onFinish,
@@ -14,7 +19,7 @@ const OnboardingForm = ({
     if (activeChild < lengthOfChildren) {
       setActiveChild((prev) => ++prev);
       return;
-    } 
+    }
     onFinish();
   };
 
@@ -25,6 +30,7 @@ const OnboardingForm = ({
   const currentChild = Children.toArray(children)[activeChild];
 
   if (isValidElement(currentChild)) {
+    //@ts-ignore
     return cloneElement(currentChild, { nextStep, prevStep });
   }
 

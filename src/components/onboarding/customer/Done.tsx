@@ -4,7 +4,12 @@ import Btn from "../../common/Btn";
 import IconWrapper from "../../common/IconWrapper";
 import TitleDescription from "../../common/TitleDescription";
 
-const Done = ({ nextStep }: { nextStep?: () => void }) => {
+const Done = ({
+  nextStep,
+}: {
+  nextStep?: () => void;
+  prevStep?: () => void;
+}) => {
   const navigate = useNavigate();
 
   return (

@@ -3,7 +3,12 @@ import InputField from "../../common/_form-inputs/InputField";
 import InputSelect from "../../common/_form-inputs/InputSelect";
 import VendorConfirmAccount from "../../common/modals/VendorConfirmAccount";
 
-const VendorStep4 = ({ nextStep }: { nextStep?: () => void }) => {
+const VendorStep4 = ({
+  nextStep,
+}: {
+  nextStep?: () => void;
+  prevStep?: () => void;
+}) => {
   return (
     <form
       className="w-full md:w-[90%] mx-auto"

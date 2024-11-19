@@ -2,7 +2,12 @@ import StepLayout from "../../_layout/StepLayout";
 import Btn from "../../common/Btn";
 import InputField from "../../common/_form-inputs/InputField";
 
-const VendorStep2 = ({ nextStep }: { nextStep?: () => void }) => {
+const VendorStep2 = ({
+  nextStep,
+}: {
+  nextStep?: () => void;
+  prevStep?: () => void;
+}) => {
   return (
     <form
       className="w-full md:w-[90%] mx-auto"
