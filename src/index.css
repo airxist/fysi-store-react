@@ -64,3 +64,7 @@ body {
 .head-description {
   @apply font-DMSansRegular
 }
+
+.onboarding-form {
+  @apply w-full md:w-[90%] mx-auto py-6
+}

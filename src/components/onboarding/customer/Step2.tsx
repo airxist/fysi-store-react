@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import StepLayout from "../../_layout/StepLayout";
 import Btn from "../../common/Btn";
 import InputField from "../../common/_form-inputs/InputField";
+import OwnAnAccount from "../OwnAnAccount";
 
 const Step2 = ({
   nextStep,
@@ -10,7 +10,7 @@ const Step2 = ({
   prevStep?: () => void;
 }) => {
   return (
-    <form className="w-full md:w-[80%] mx-auto">
+    <form className="onboarding-form">
       <StepLayout
         title="Personal Details"
         description="We'd love to get to know you better! Please fill in a few details"
@@ -55,12 +55,7 @@ const Step2 = ({
           onClick={nextStep}
         />
 
-        <p className="mt-5 text-sm text-center font-DMSansRegular">
-          Already have an account{" "}
-          <Link to="/login" className="font-DMSansBold text-custom-orange-700">
-            Log in
-          </Link>
-        </p>
+        <OwnAnAccount question="Already have an account" />
       </div>
     </form>
   );

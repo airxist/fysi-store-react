@@ -2,7 +2,7 @@ declare interface BtnProps {
   text?: string;
   IconLeft?: React.ComponentProps;
   IconRight?: React.ComponentProps;
-  containerStyle: string;
+  containerStyle?: string;
   btnVariant?: string;
   href?: string;
   [key: string]: any;

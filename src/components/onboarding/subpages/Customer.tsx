@@ -11,7 +11,7 @@ const Customer = () => {
   const navigate = useNavigate();
   return (
     <AuthLayout onboardPhotos={onboardingPhotos.customer}>
-      <OnboardingForm onFinish={() => navigate('/customer/management')}>
+      <OnboardingForm onFinish={() => navigate('/onboarding/login')}>
         <Step1 />
         <Step2 />
         <Step3 />

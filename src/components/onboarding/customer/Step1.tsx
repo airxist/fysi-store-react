@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import StepLayout from "../../_layout/StepLayout";
 import Btn from "../../common/Btn";
 import InputField from "../../common/_form-inputs/InputField";
+import OwnAnAccount from "../OwnAnAccount";
 
 const Step1 = ({
   nextStep,
@@ -10,10 +10,7 @@ const Step1 = ({
   prevStep?: () => void;
 }) => {
   return (
-    <form
-      className="w-full md:w-[80%] mx-auto"
-      onSubmit={(e) => e.preventDefault()}
-    >
+    <form className="onboarding-form" onSubmit={(e) => e.preventDefault()}>
       <StepLayout
         title="Create your account"
         description="Lets get started by creating your account. To keep your account safe we need a strong password"
@@ -60,12 +57,7 @@ const Step1 = ({
           onClick={nextStep}
         />
 
-        <p className="mt-5 text-sm text-center font-DMSansRegular">
-          Already have an account{" "}
-          <Link to="/login" className="font-DMSansBold text-custom-orange-700">
-            Log in
-          </Link>
-        </p>
+        <OwnAnAccount question="Already have an account" />
       </div>
     </form>
   );

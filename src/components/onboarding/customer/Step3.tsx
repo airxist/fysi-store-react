@@ -1,14 +1,13 @@
-// import { Link } from "react-router-dom";
 import React from "react";
 import StepLayout from "../../_layout/StepLayout";
 import Btn from "../../common/Btn";
 
-import { ChildProps } from "../OnboardingForm";
+import { OnboardingFormChildProps } from "../OnboardingForm";
 
-const Step3: React.FC<ChildProps> = ({ nextStep }) => {
+const Step3: React.FC<OnboardingFormChildProps> = ({ nextStep }) => {
   return (
     <form
-      className="w-full md:w-[90%] mx-auto"
+      className="onboarding-form"
       onSubmit={(e) => e.preventDefault()}
     >
       <StepLayout
@@ -32,9 +31,6 @@ const Step3: React.FC<ChildProps> = ({ nextStep }) => {
         <p className="mt-5 text-sm text-center font-DMSansRegular">
           Didn't receive the verification code? It might take a moment. You can
           request a new code in 60 seconds
-          {/* <Link to="/login" className="font-DMSansBold text-custom-orange-700">
-            Log in
-          </Link> */}
         </p>
       </div>
     </form>

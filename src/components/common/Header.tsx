@@ -32,7 +32,7 @@ const Header = () => {
         <div className="flex-center gap-x-2">
           <MobileNav />
 
-          <Logo />
+          <Logo color="dark" />
         </div>
 
         <div className="flex-1 flex-apart">
@@ -72,7 +72,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="mt-3 mb-8 padded md:hidden">
+      {/* <div className="mt-3 mb-8 padded md:hidden">
         <SearchInputField
           containerStyle="border bg-white rounded-[6px] border-[#D0D5DD] flex-center h-9"
           placeHolder="Search Categories"
@@ -82,7 +82,7 @@ const Header = () => {
           handleSearch={() => {}}
           btnStyle="h-full rounded-[4px] px-4 py-2 text-sm"
         />
-      </div>
+      </div> */}
     </header>
   );
 };

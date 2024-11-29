@@ -1,6 +1,9 @@
 import accessories from "../assets/icons/accessories.png";
 import arrow from "../assets/icons/arrow.png";
+import upload from "../assets/icons/upload.png";
+import google from "../assets/icons/google.png";
 import avatar from "../assets/icons/avatar.png";
+import avatar2 from "../assets/icons/avatar2.png";
 import bag from "../assets/icons/bag.png";
 import call from "../assets/icons/call.png";
 import care from "../assets/icons/care.png";
@@ -87,6 +90,7 @@ import venboard2 from "../assets/images/venboard2.png";
 import venboard3 from "../assets/images/venboard3.png";
 
 export const icons = {
+  avatar2, upload,
   bagWhite,
   pencil,
   settings,
@@ -126,6 +130,7 @@ export const icons = {
   twitter,
   user,
   van,
+  google,
   doneCorrect,
 };
 
@@ -951,3 +956,11 @@ export const issueType = [
   "Size/Color Mismatch",
   "Missing Parts",
 ];
+
+export const dummyCustomer = {
+  name: "DeeDee",
+  profilePhoto: icons.avatar,
+  email: "DeeDee@gmail.com",
+  address: "50 togo street victoria island Lagos, Nigeria",
+  phone: "0907878787878",
+};

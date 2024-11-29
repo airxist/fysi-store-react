@@ -1,6 +1,6 @@
 import React, { Children, cloneElement, isValidElement, useState } from "react";
 
-export interface ChildProps {
+export interface OnboardingFormChildProps {
   nextStep?: () => void;
   prevStep?: () => void;
 }

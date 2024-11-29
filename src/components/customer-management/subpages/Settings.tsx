@@ -1,5 +1,11 @@
+import PersonalInfo from "../PersonalInfo";
+
 const Settings = () => {
-  return <div>Settings</div>;
+  return (
+    <div className="flex-1">
+      <PersonalInfo />
+    </div>
+  );
 };
 
 export default Settings;

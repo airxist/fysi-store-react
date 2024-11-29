@@ -19,7 +19,7 @@ const CustomerNav = () => {
                       className="px-4 py-2 text-sm gap-x-2 h-9 font-inter hover:bg-forest_green-50"
                     >
                       <Link to={navItem.href} className="flex items-center">
-                        <IconWrapper icon={navItem.icon} containerStyle="size-5" />
+                        <IconWrapper icon={navItem.icon} containerStyle="size-5 mr-3" />
                         {navItem.title}
                       </Link>
                     </li>
